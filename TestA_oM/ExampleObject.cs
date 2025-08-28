@@ -29,7 +29,7 @@ using System.Linq;
 namespace BH.oM.TestA
 {
     [Description("Object description in here. Will appear in the UI tooltip.")]
-    public class ExampleObject : IExampleInterfaceA
+    public class ExampleObjectA : IExampleInterfaceA
     {
         // // See examples in the BHoM repo and the wiki to see how we define types.
         // // Generally, all properties should be public and have public getter and setter.
