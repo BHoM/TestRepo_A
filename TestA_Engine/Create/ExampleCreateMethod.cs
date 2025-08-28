@@ -35,11 +35,11 @@ namespace BH.Engine.TestA
         /***************************************************/
 
         [Description("Description of the method. Will appear in the UI tooltip.")]
-        public static ExampleObject ExampleCreateMethod(string someInput1, int someInput2)
+        public static ExampleObjectA ExampleCreateMethod(string someInput1, int someInput2)
         {
             // This method will appear in every UI (e.g. Grasshopper) as a component.
             // Find it using the CTRL+Shift+B search bar, or by navigating the `Create` component (Engine tab) right click menu.
-            return new ExampleObject() { SomeStringProperty = someInput1, SomeNumberProperty = someInput2 };
+            return new ExampleObjectA() { SomeStringProperty = someInput1, SomeNumberProperty = someInput2 };
         }
 
         /***************************************************/

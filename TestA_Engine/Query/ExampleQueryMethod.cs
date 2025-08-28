@@ -35,7 +35,7 @@ namespace BH.Engine.TestA
         /***************************************************/
 
         [Description("Description of the method. Will appear in the UI tooltip.")]
-        public static string ExampleQueryMethod(this ExampleObject exampleObject, string additionalInput = "")
+        public static string ExampleQueryMethod(this ExampleObjectA exampleObject, string additionalInput = "")
         {
             // NOTE: Extension method
             // Query methods should return some data that is derivable from a main input object on which they operate upon. 

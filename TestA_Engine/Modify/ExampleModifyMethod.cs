@@ -36,7 +36,7 @@ namespace BH.Engine.TestA
         /***************************************************/
 
         [Description("Description of the method. Will appear in the UI tooltip.")]
-        public static ExampleObject ExampleModifyMethod(ExampleObject objectToModify)
+        public static ExampleObjectA ExampleModifyMethod(ExampleObjectA objectToModify)
         {
             // This method will appear in every UI (e.g. Grasshopper) as a component.
             // Find it using the CTRL+Shift+B search bar, or by navigating the `Create` component (Engine tab) right click menu.
