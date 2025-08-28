@@ -12,5 +12,3 @@ jobs:
     with:
       repository_name: ${{ github.repository }}
       branch_name: ${{ github.head_ref || github.ref_name }}
-    secrets:
-      GH_TOKEN: ${{ github.token }}
