@@ -6,6 +6,6 @@ namespace BH.oM.TestA
 {
     public interface IExampleInterfaceA
     {
-        string SomeStringProperty { get; set; } 
+        string SomeStringProperty { get; set; }
     }
 }
