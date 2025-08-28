@@ -20,27 +20,30 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.oM.Adapter;
+using BH.oM.TestA;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BH.Adapter.SoftwareName
+namespace BH.Engine.TestA
 {
-    public partial class SoftwareNameAdapter : BHoMAdapter
+    public static partial class Query
     {
-        // This method gets called when appropriate by the Push method contained in the base Adapter class.
-        // Unlike the Create, Delete and Read, this method already exposes a simple implementation: it calls Delete and then Create.
-        // It can be overridden here keeping in mind the following:
-        // - it gets called once per each Type, and if equal objects are found;
-        // - the object equality is tested through this.AdapterComparers, that need to be implemented for each type.
-        // See the wiki for more info.
+        /***************************************************/
+        /**** Public Methods                            ****/
+        /***************************************************/
 
-        protected override bool IUpdate<T>(IEnumerable<T> objects, ActionConfig actionConfig = null)
+        [Description("Description of the method. Will appear in the UI tooltip.")]
+        public static string ExampleQueryMethod(this ExampleObject exampleObject, string additionalInput = "")
         {
-            return base.IUpdate(objects, actionConfig);
+            // NOTE: Extension method
+            // Query methods should return some data that is derivable from a main input object on which they operate upon. 
+            // For this reason, they are to be written as extension methods (using the `this` keyword on the first input).
+
+            // This method will appear in every UI (e.g. Grasshopper) as a component.
+            // Find it using the CTRL+Shift+B search bar, or by navigating the `Create` component (Engine tab) right click menu.
+            return exampleObject.SomeStringProperty + exampleObject.SomeNumberProperty.ToString() + additionalInput;
         }
 
         /***************************************************/

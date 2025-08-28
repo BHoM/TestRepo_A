@@ -20,17 +20,16 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.oM.Base;
-using BH.oM.Base.Attributes;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 
-namespace BH.oM.Adapters.SoftwareName
+namespace BH.oM.TestA
 {
     [Description("Object description in here. Will appear in the UI tooltip.")]
-    public class ExampleObject : BHoMObject
+    public class ExampleObject : IExampleInterfaceA
     {
         // // See examples in the BHoM repo and the wiki to see how we define types.
         // // Generally, all properties should be public and have public getter and setter.

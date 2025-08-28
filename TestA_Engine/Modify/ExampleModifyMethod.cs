@@ -20,38 +20,27 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.oM.Adapter;
-using BH.oM.Base;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BH.Adapter.SoftwareName
+using BH.oM.TestA;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+
+namespace BH.Engine.TestA
 {
-    public partial class SoftwareNameAdapter : BHoMAdapter
+    public static partial class Modify
     {
         /***************************************************/
-        /**** Adapter overload method                   ****/
+        /**** Public Methods                            ****/
         /***************************************************/
 
-        // This method gets called when appropriate by the Pull method contained in the base Adapter class.
-        // It gets called once per each Type.
-        protected override IEnumerable<IBHoMObject> IRead(Type type, IList ids, ActionConfig actionConfig = null)
+        [Description("Description of the method. Will appear in the UI tooltip.")]
+        public static ExampleObject ExampleModifyMethod(ExampleObject objectToModify)
         {
-            // Preferrably, different Create logic for different object types should go in separate methods.
-            // We achieve this by using the ICreate method to only dynamically dispatching to *type-specific Create implementations*
-            // In other words:
-            // if (type == typeof(SomeType1))
-            //     return ReadSomeType1(ids as dynamic);
-            // else if (type == typeof(SomeType2))
-            //     return ReadSomeType2(ids as dynamic);
-            // else if (type == typeof(SomeType3))
-            //     return ReadSomeType3(ids as dynamic);
-
-            return new List<IBHoMObject>();
+            // This method will appear in every UI (e.g. Grasshopper) as a component.
+            // Find it using the CTRL+Shift+B search bar, or by navigating the `Create` component (Engine tab) right click menu.
+            throw new NotImplementedException();
         }
 
         /***************************************************/
