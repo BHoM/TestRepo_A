@@ -21,6 +21,7 @@
  */
 
 
+using BH.oM.Base.Attributes;
 using BH.oM.TestA;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,8 @@ namespace BH.Engine.TestA
         /***************************************************/
 
         [Description("Description of the method. Will appear in the UI tooltip.")]
+        [Input("objectToModify", "Description of the input. Will appear in the UI tooltip.")]
+        [Input("additionalInput", "Description of the input. Will appear in the UI tooltip.")]
         public static ExampleObjectA ExampleModifyMethod(ExampleObjectA objectToModify)
         {
             // This method will appear in every UI (e.g. Grasshopper) as a component.
