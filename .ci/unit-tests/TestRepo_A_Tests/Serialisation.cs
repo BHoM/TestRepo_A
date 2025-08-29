@@ -1,0 +1,28 @@
+﻿using BH.oM.Test.Results;
+using BH.oM.Test.UnitTests;
+using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using BH.Tests.Setup;
+using BH.oM.TestA;
+
+namespace BH.Tests.Engine.Structure
+{
+    public class Serialisation : SerialisationTestBase
+    {
+        public static IEnumerable<Type> OmTypes()
+        {
+            return oMTypesToTest(new List<Assembly> { typeof(ExampleObjectA).Assembly });
+        }
+
+        public static IEnumerable<MethodBase> EngineMethods()
+        {
+            return EngineMethodsToTest(new List<Assembly> { typeof(BH.Engine.TestA.Query).Assembly });
+        }
+    }
+}
