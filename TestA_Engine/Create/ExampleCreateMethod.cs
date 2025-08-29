@@ -20,6 +20,7 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+using BH.oM.Base.Attributes;
 using BH.oM.TestA;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,8 @@ namespace BH.Engine.TestA
         /***************************************************/
 
         [Description("Description of the method. Will appear in the UI tooltip.")]
+        [Input("someInput1", "Description of the input. Will appear in the UI tooltip.")]
+        [Input("someInput2", "Description of the input. Will appear in the UI tooltip.")]
         public static ExampleObjectA ExampleCreateMethod(string someInput1, int someInput2)
         {
             // This method will appear in every UI (e.g. Grasshopper) as a component.
