@@ -30,7 +30,7 @@ using System.Linq;
 
 namespace BH.Engine.TestA
 {
-    public static partial class Modify
+    public static partial class Modify 
     {
         /***************************************************/
         /**** Public Methods                            ****/
