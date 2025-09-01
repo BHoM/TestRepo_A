@@ -39,7 +39,7 @@ namespace BH.oM.TestA
         // // Objects created with this convention will automatically appear as UI components (e.g. Grasshopper component).
 
         [Description("Property description in here.")]
-        public string SomeStringProperty { get; set; }  
+        public string SomeStringProperty { get; set; }   
 
         [Description("Property description in here.")]
         public int SomeNumberProperty { get; set; }
