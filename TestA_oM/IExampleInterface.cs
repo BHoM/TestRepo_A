@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BH.oM.TestA
 {
-    public interface IExampleInterface : IObject
+    public interface IExampleInterface : IObject 
     {
         string SomeStringProperty { get; set; } 
     }
