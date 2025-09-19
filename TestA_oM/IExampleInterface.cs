@@ -7,7 +7,7 @@ namespace BH.oM.TestA
 {
     public interface IExampleInterface : IObject 
     {
-        string SomeStringProperty { get; set; }    
+        string SomeStringProperty { get; set; }     
     }
 }
  
