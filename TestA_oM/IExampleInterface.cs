@@ -10,3 +10,4 @@ namespace BH.oM.TestA
         string SomeStringProperty { get; set; }    
     }
 }
+ 
