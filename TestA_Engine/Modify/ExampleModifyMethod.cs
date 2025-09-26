@@ -21,6 +21,7 @@
  */
 
 
+using BH.oM.Base.Attributes;
 using BH.oM.TestA;
 using System;
 using System.Collections.Generic;
@@ -29,14 +30,16 @@ using System.Linq;
 
 namespace BH.Engine.TestA
 {
-    public static partial class Modify
+    public static partial class Modify 
     {
         /***************************************************/
         /**** Public Methods                            ****/
         /***************************************************/
 
         [Description("Description of the method. Will appear in the UI tooltip.")]
-        public static ExampleObject ExampleModifyMethod(ExampleObject objectToModify)
+        [Input("objectToModify", "Description of the input. Will appear in the UI tooltip.")]
+        [Input("additionalInput", "Description of the input. Will appear in the UI tooltip.")]
+        public static ExampleObjectA ExampleModifyMethod(ExampleObjectA objectToModify)
         {
             // This method will appear in every UI (e.g. Grasshopper) as a component.
             // Find it using the CTRL+Shift+B search bar, or by navigating the `Create` component (Engine tab) right click menu.

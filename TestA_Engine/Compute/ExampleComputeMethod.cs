@@ -21,6 +21,7 @@
  */
 
 
+using BH.oM.Base.Attributes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,8 @@ namespace BH.Engine.TestA
         /***************************************************/
 
         [Description("Description of the method. Will appear in the UI tooltip.")]
+        [Input("someInput1", "Description of the input. Will appear in the UI tooltip.")]
+        [Input("someInput2", "Description of the input. Will appear in the UI tooltip.")]
         public static void ExampleComputeMethod(string someInput1, string someInput2)
         {
             // This method will appear in every UI (e.g. Grasshopper) as a component.

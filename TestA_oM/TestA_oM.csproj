@@ -16,7 +16,18 @@
 
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot;  &quot;$(ProgramData)\BHoM\Assemblies&quot; /Y" />
+    <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot;  &quot;$(ProgramData)\BHoM\Assemblies&quot; /Y&#xD;&#xA;xcopy &quot;$(TargetDir)\..\..\..\libs\*.dll&quot; &quot;$(ProgramData)\BHoM\Assemblies&quot; /Y" />
   </Target>
+
+
+
+  <ItemGroup>
+    <Reference Include="BHoM">
+      <HintPath>..\libs\BHoM.dll</HintPath>
+    </Reference>
+    <Reference Include="Quantities_oM">
+      <HintPath>..\libs\Quantities_oM.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
 </Project>

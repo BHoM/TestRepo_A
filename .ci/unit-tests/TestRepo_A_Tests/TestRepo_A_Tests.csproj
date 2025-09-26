@@ -1,0 +1,74 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />
+	<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.4.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NUnit.Analyzers" Version="3.9.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\TestA_Engine\TestA_Engine.csproj" />
+    <ProjectReference Include="..\..\..\TestA_oM\TestA_oM.csproj" />
+  </ItemGroup>
+
+	
+	
+	<ItemGroup>
+		<Reference Include="Analytical_oM">
+			<HintPath>$(ProgramData)\BHoM\Assemblies\Analytical_oM.dll</HintPath>
+			<Private>True</Private>
+			<SpecificVersion>False</SpecificVersion>
+		</Reference>
+		<Reference Include="BHoM">
+			<HintPath>$(ProgramData)\BHoM\Assemblies\BHoM.dll</HintPath>
+			<Private>True</Private>
+			<SpecificVersion>False</SpecificVersion>
+		</Reference>
+		<Reference Include="BHoM_Engine">
+			<HintPath>$(ProgramData)\BHoM\Assemblies\BHoM_Engine.dll</HintPath>
+			<Private>True</Private>
+			<SpecificVersion>False</SpecificVersion>
+		</Reference>
+		<Reference Include="Data_oM">
+			<HintPath>$(ProgramData)\BHoM\Assemblies\Data_oM.dll</HintPath>
+		</Reference>
+		<Reference Include="Dimensional_oM">
+			<HintPath>$(ProgramData)\BHoM\Assemblies\Dimensional_oM.dll</HintPath>
+			<Private>True</Private>
+			<SpecificVersion>False</SpecificVersion>
+		</Reference>
+		<Reference Include="Geometry_oM">
+			<HintPath>$(ProgramData)\BHoM\Assemblies\Geometry_oM.dll</HintPath>
+			<Private>True</Private>
+			<SpecificVersion>False</SpecificVersion>
+		</Reference>
+		<Reference Include="NUnit_Engine">
+			<HintPath>$(ProgramData)\BHoM\Assemblies\NUnit_Engine.dll</HintPath>
+			<Private>True</Private>
+			<SpecificVersion>False</SpecificVersion>
+		</Reference>
+		<Reference Include="Test_Engine">
+			<HintPath>$(ProgramData)\BHoM\Assemblies\Test_Engine.dll</HintPath>
+		</Reference>
+		<Reference Include="Test_oM">
+			<HintPath>$(ProgramData)\BHoM\Assemblies\Test_oM.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	
+  <ItemGroup>
+    <Using Include="NUnit.Framework" />
+  </ItemGroup>
+
+</Project>
